@@ -9,8 +9,7 @@
   display: none;
   gap: 14px;
   align-items: center;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -23,6 +22,8 @@
 
   li a {
     background-color: var(--COR-CINZA-ESCURO);
+    font-size: 16px;
+    font-weight: 400;
     color: #fff;
     padding: 8px 14px;
     border-radius: 4px;

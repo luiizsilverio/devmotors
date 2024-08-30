@@ -14,7 +14,7 @@ export function Hero(props: HeroProps) {
   return (
     <main className={styles.main}>
       <div className={styles.container}>
-        <h1 className={styles.title}>{ props.heading }</h1>
+        <h1>{ props.heading }</h1>
         <a href={props.buttonUrl} target='_blank'>
           { props.icon }
           { props.buttonTitle }

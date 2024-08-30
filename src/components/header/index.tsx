@@ -25,9 +25,10 @@ export default function Header() {
             <Link href="/">Dev Motors</Link>
           </div>
           <nav className={styles.nav}>
-            <Link href="/">HOME</Link>
-            <Link href="/#servicos">SERVIÇOS</Link>
-            <Link href="/#contatos">CONTATOS</Link>
+            <Link href="/">Home</Link>
+            <Link href="/#sobre">Sobre</Link>
+            <Link href="/#servicos">Serviços</Link>
+            <Link href="/#contato">Contato</Link>
           </nav>
 
         </div>
