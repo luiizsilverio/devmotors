@@ -5,7 +5,7 @@ import { X, Menu } from 'lucide-react';
 import Link from 'next/link';
 import styles from './styles.module.scss';
 
-export default function Submenu() {
+export function Submenu() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
