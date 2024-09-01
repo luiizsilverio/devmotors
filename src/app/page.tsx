@@ -1,19 +1,23 @@
 import { Phone } from 'lucide-react';
 import { Hero } from "@/components/hero";
 import { Submenu } from "@/components/home/submenu";
-import { getDataHome } from "@/utils/actions/get-data";
-import { HomeProps } from "@/utils/home.type";
 import { Sobre } from '@/components/home/sobre';
 import { Services } from '@/components/home/services';
 import { Container } from '@/components/container';
 import { Footer } from '@/components/footer';
+import { HomeProps, PagesProps } from "@/utils/home.type";
+import { getDataHome, getServices } from "@/utils/actions/get-data";
 
 export default async function Home() {
   const { object }: HomeProps = await getDataHome();
+  const menu: PagesProps = await getServices();
 
   return (
     <main>
-      <Submenu />
+      {menu.objects.length > 0 && 
+        <Submenu menu={menu} />
+      }
+
       <Hero 
         heading={object.metadata.heading} 
         buttonTitle={object.metadata.cta_button.title} 

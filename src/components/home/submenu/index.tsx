@@ -3,9 +3,15 @@
 import { useEffect, useState } from 'react';
 import { X, Menu } from 'lucide-react';
 import Link from 'next/link';
+
+import { PagesProps } from "@/utils/home.type";
 import styles from './styles.module.scss';
 
-export function Submenu() {
+interface SubmenuProps {
+  menu: PagesProps;
+}
+
+export function Submenu({ menu }: SubmenuProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
@@ -40,8 +46,9 @@ export function Submenu() {
           </button>
         )}
 
-        <li><Link href="#">Troca de óleo</Link></li>
-        <li><Link href="#">Manutenção preventiva</Link></li>
+        {menu.objects.map(item => (
+          <li><Link href={`/post/${item.slug}`}>{item.title}</Link></li>
+        ))}
       </ul>
     </section>
   )

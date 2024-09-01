@@ -6,7 +6,7 @@ interface Props {
   data: ServiceProps[];
 }
 
-export function Services({ data }: Props) {
+export async function Services({ data }: Props) {
   return (
     <section className={styles.container} id="servicos">
       <h2>Conheça nossos serviços</h2>

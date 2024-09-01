@@ -6,6 +6,15 @@ export interface HomeProps {
   }
 }
 
+export interface PageProps {
+  slug: string;
+  title: string;
+}
+
+export interface PagesProps {
+  objects: PageProps[];
+}
+
 export interface MetadataProps {
   banner: {
     url: string;
