@@ -18,6 +18,7 @@ export function Sobre({ data }: Props) {
           src={data.banner.url}
           alt="Imagem ilustrativa sobre a empresa"
           fill
+          sizes="(max-width: 480px) 100vw, (max-width: 1024px) 75vw, 50vw"
         />
       </div>
     </section>

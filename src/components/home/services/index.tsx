@@ -18,6 +18,7 @@ export async function Services({ data }: Props) {
                 src={service.image.url}
                 alt={service.description}
                 fill
+                sizes="(max-width: 480px) 100vw, (max-width: 1024px) 75vw, 50vw"
               />
             </div>
             <p>{service.description}</p>

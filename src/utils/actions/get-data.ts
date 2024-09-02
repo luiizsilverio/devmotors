@@ -31,3 +31,29 @@ export async function getServices() {
     throw new Error("Erro ao buscar serviços");
   }
 }
+
+export async function getServiceBySlug(slugService: string) {
+  const { NEXT_PUBLIC_API_URL, COSMIC_READ_KEY } = process.env;
+  const baseUrl = `${NEXT_PUBLIC_API_URL}/objects`;
+
+  // a URL deve conter ?query={"type":"services"}
+  const queryParams = new URLSearchParams({
+    query: JSON.stringify({ slug: slugService }),
+    props: 'slug,title,metadata',
+    read_key: COSMIC_READ_KEY as string
+  });
+
+  const url = `${baseUrl}?${queryParams.toString()}`;
+
+  try {
+    const res = await fetch(url, { next: { revalidate: 120 }});
+
+    if (!res.ok) {
+      throw new Error(`Erro ao buscar o serviço ${slugService}`);
+    }
+
+    return res.json();
+  } catch(err) {
+    throw new Error(`Erro ao buscar o serviço ${slugService}`);
+  }
+}

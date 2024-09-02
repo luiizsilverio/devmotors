@@ -53,7 +53,7 @@ export function Footer({ data }: Props) {
       </a>
 
       <div className={styles.direitos}>
-        <p>Todos os direitos reservados Dev Motors @{`${new Date().getFullYear()}`}</p>
+        <p>Todos os direitos reservados @{`${new Date().getFullYear()}`}</p>
       </div>
     </footer>
   )

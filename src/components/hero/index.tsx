@@ -27,6 +27,7 @@ export function Hero(props: HeroProps) {
           src={props.bannerUrl}
           priority
           fill
+          sizes="(max-width: 480px) 100vw, (max-width: 1024px) 75vw, 50vw"
         />
       </div>
     </main>
