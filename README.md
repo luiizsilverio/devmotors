@@ -1,7 +1,7 @@
 # DEV-MOTORS 🚘
 
 Aplicação desenvolvida em React + Next, utilizando App Router, durante o curso [NextJS do zero ao avançado na prática 2023](https://www.udemy.com/course/nextjs-zero-ao-avancado/), do professor Matheus Fraga. <br />
-Todas as páginas são configuradas no __Consmic CMS__. A aplicação apenas busca os dados da página via API e estiliza a página. Dessa forma, as páginas são dinâmicas, podendo-se alterar dados ou acrescentar páginas no CMS e isso refletir na aplicação.<br />
+Todas as páginas são configuradas no __Cosmic CMS__. A aplicação apenas busca os dados da página via API e estiliza a página. Dessa forma, as páginas são dinâmicas, podendo-se alterar dados ou acrescentar páginas no CMS e isso refletir na aplicação.<br />
 <br/>
 
 ## 🚀 Tecnologias
