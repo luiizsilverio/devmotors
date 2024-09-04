@@ -1,10 +1,10 @@
+import Image from 'next/image';
 import { Phone } from 'lucide-react';
 import { Hero } from "@/components/hero";
-import styles from './styles.module.scss';
+import { Container } from '@/components/container';
 import { PostProps } from '@/utils/post.type';
 import { getServiceBySlug } from '@/utils/actions/get-data';
-import { Container } from '@/components/container';
-import Image from 'next/image';
+import styles from './styles.module.scss';
 
 interface Props {
   params: {

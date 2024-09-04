@@ -1,3 +1,5 @@
+import { redirect } from "next/navigation";
+
 export async function getDataHome() {
   const { NEXT_PUBLIC_API_URL, COSMIC_READ_KEY } = process.env;
   const url = `${NEXT_PUBLIC_API_URL}/objects/66cf7baf23887ff69c06f620?read_key=${COSMIC_READ_KEY}&depth=1&props=slug,title,metadata`;
@@ -54,6 +56,8 @@ export async function getServiceBySlug(slugService: string) {
 
     return res.json();
   } catch(err) {
-    throw new Error(`Erro ao buscar o serviço ${slugService}`);
+    console.log(err);
+    // redirect('/');
+    // throw new Error(`Erro ao buscar o serviço ${slugService}`);
   }
 }

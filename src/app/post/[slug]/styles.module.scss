@@ -57,6 +57,24 @@
   justify-content: center;
 }
 
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 90px);
+  gap: 24px;
+
+  a {
+    background-color: var(--COR-CINZA-ESCURO);
+    color: #FFF;
+    border-radius: 4px;
+    padding: 8px 34px;
+    margin: 0 auto;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     // flex-direction: row;
